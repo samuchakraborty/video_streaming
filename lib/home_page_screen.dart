@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'class_info.dart';
 import 'constant.dart';
 
 class HomePage extends StatefulWidget {
@@ -104,7 +105,14 @@ class _HomePageState extends State<HomePage> {
                   maximumSize: const Size(150, 50),
                 ),
                 //  margin: const EdgeInsets.only(top: 10),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ClassInfo(),
+                    ),
+                  );
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -428,9 +436,10 @@ class _HomePageState extends State<HomePage> {
                   //  margin: const EdgeInsets.only(top: 10),
                   onTap: () {},
                   child: Container(
-                    padding:const EdgeInsets.only(left: 20,right: 20, top: 15, bottom: 15),
+                    padding: const EdgeInsets.only(
+                        left: 20, right: 20, top: 15, bottom: 15),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(32.0),
                         border: Border.all(width: 1, color: Colors.grey)),
                     child: Row(
@@ -457,11 +466,11 @@ class _HomePageState extends State<HomePage> {
                   width: 10,
                 ),
                 InkWell(
-
                   //  margin: const EdgeInsets.only(top: 10),
                   onTap: () {},
                   child: Container(
-                    padding:const EdgeInsets.only(left: 20,right: 20, top: 15, bottom: 15),
+                    padding: const EdgeInsets.only(
+                        left: 20, right: 20, top: 15, bottom: 15),
                     decoration: BoxDecoration(
                         color: Colors.green,
                         borderRadius: BorderRadius.circular(32.0),
