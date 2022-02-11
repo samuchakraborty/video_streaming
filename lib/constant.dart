@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const text18style = TextStyle(fontSize: 18, fontFamily: "Regular");
@@ -6,6 +7,7 @@ const text18BlackStyle =
 
 const text12style = TextStyle(fontSize: 12, fontFamily: "Regular");
 const text14style = TextStyle(fontSize: 14, fontFamily: "Regular");
+const text12Boldstyle = TextStyle(fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Regular");
 
 const text14boldStyle =
     TextStyle(fontSize: 14, fontWeight: FontWeight.bold, fontFamily: "Regular");
@@ -16,5 +18,7 @@ const text18boldStyle = TextStyle(
     fontWeight: FontWeight.bold,
     fontFamily: "Regular");
 const text13style = TextStyle(fontSize: 13, fontFamily: "Regular");
+const text11style = TextStyle(fontSize: 11, fontFamily: "Regular");
+
 const text13Colorstyle =
     TextStyle(fontSize: 13, color: Colors.amberAccent, fontFamily: "Regular");
