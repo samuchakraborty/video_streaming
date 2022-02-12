@@ -19,6 +19,18 @@ const text18boldStyle = TextStyle(
     fontFamily: "Regular");
 const text13style = TextStyle(fontSize: 13, fontFamily: "Regular");
 const text11style = TextStyle(fontSize: 11, fontFamily: "Regular");
+const Color textColor = Color(0xFF2F5563);
+const Color textColor2  = Color(0xFFE0AA5C);
+
+
+const text14Colorstyle = TextStyle(fontSize: 14, color: textColor, fontFamily: "Regular");
+const text14boldColorStyle =
+TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color:  textColor, fontFamily: "Regular");
+const text14textColorstyle = TextStyle(fontSize: 14,
+    color: textColor2,
+
+    fontFamily: "Regular");
+
 
 const text13Colorstyle =
     TextStyle(fontSize: 13, color: Colors.amberAccent, fontFamily: "Regular");

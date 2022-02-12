@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'class_info.dart';
 import 'constant.dart';
+import 'online_class.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,17 +42,27 @@ class _HomePageState extends State<HomePage> {
                         "Upcoming Live",
                         style: text18style,
                       ),
-                      Row(
-                        children: const [
-                          Text(
-                            "All",
-                            style: text14style,
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: 15,
-                          ),
-                        ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>const LiveClassInfo(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: const [
+                            Text(
+                              "All",
+                              style: text14style,
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

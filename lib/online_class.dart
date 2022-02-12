@@ -1,18 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'constant.dart';
 import 'home_page_screen.dart';
 
-class ClassInfo extends StatefulWidget {
-  const ClassInfo({Key? key}) : super(key: key);
+class LiveClassInfo extends StatefulWidget {
+  const LiveClassInfo({Key? key}) : super(key: key);
 
   @override
-  _ClassInfoState createState() => _ClassInfoState();
+  _LiveClassInfoState createState() => _LiveClassInfoState();
 }
 
-class _ClassInfoState extends State<ClassInfo> {
+class _LiveClassInfoState extends State<LiveClassInfo> {
   bool isSelected = false;
 
   bool unSelected = false;
@@ -24,14 +23,17 @@ class _ClassInfoState extends State<ClassInfo> {
         backgroundColor: Colors.white,
         body: ListView(
           children: [
+            const SizedBox(
+              height: 10,
+            ),
             Container(
-              margin: const EdgeInsets.all(20),
-              alignment: Alignment.center,
-              padding: const EdgeInsets.all(20),
-              color: Colors.tealAccent,
+              margin: const EdgeInsets.all(10),
+              // alignment: Alignment.center,
+              // padding: const EdgeInsets.all(20),
+              // color: Colors.tealAccent,
               child: const Text(
-                "Chassidus: Likkutei Torah ani Ledodi",
-                style: text18boldStyle,
+                "Yisroel Besser in Conversation with Rabbi Jacobson",
+                style: text14style,
               ),
             ),
             Container(
@@ -72,7 +74,7 @@ class _ClassInfoState extends State<ClassInfo> {
                   //   height: 10,
                   // ),
                   Image.asset(
-                    'assets/images.png',
+                    'assets/interview.png',
                     width: MediaQuery.of(context).size.width - 20,
                     height: 200,
                     fit: BoxFit.fill,
@@ -98,7 +100,7 @@ class _ClassInfoState extends State<ClassInfo> {
                           ),
 
                           const SizedBox(
-                            width: 10,
+                            width: 20,
                           ),
                           const Icon(FontAwesomeIcons.comment),
 
@@ -110,7 +112,7 @@ class _ClassInfoState extends State<ClassInfo> {
                           // ),
 
                           const Text(
-                            " 7",
+                            "  7",
                             style: text13style,
                           ),
                         ],
@@ -148,17 +150,16 @@ class _ClassInfoState extends State<ClassInfo> {
                               // color: Colors.amber,
                               itemBuilder: (context) => [
                                     PopupMenuItem(
-
+                                      padding: const EdgeInsets.all(0),
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
-                                        children:  [
+                                        children: [
                                           InkWell(
-                                              onTap: (){
+                                              onTap: () {
                                                 Navigator.pop(context);
                                               },
-                                              child
-                                              :const Icon(Icons.clear)),
+                                              child: const Icon(Icons.clear)),
                                         ],
                                       ),
                                       value: 1,
@@ -167,23 +168,7 @@ class _ClassInfoState extends State<ClassInfo> {
                                       child: Row(
                                         children: [
                                           Image.asset(
-                                              "assets/cloud-computing.png"),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          const Text(
-                                            "Download",
-                                            style: text14style,
-                                          ),
-                                        ],
-                                      ),
-                                      value: 1,
-                                    ),
-                                    PopupMenuItem(
-                                      child: Row(
-                                        children: [
-                                          Image.asset(
-                                              "assets/Path 448.png"),
+                                              "assets/incoming-call.png"),
                                           const SizedBox(
                                             width: 10,
                                           ),
@@ -195,8 +180,7 @@ class _ClassInfoState extends State<ClassInfo> {
                                     PopupMenuItem(
                                       child: Row(
                                         children: [
-                                          Image.asset(
-                                              "assets/Group 4267.png"),
+                                          Image.asset("assets/Group 4267.png"),
                                           const SizedBox(
                                             width: 10,
                                           ),
@@ -213,16 +197,27 @@ class _ClassInfoState extends State<ClassInfo> {
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text(
-                    "Elul: When The King Is Accessible to All",
-                    style: text18style,
+                  Text("August 26, 2021 ~ 18 Elul 5781"),
+
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width / 1.3,
+
+                    child: const Text(
+                      '"Mishpacha" Interviews Rabbi YY on'
+                          ' JewishLife Today',
+                      style: text18style,
+                      // textAlign: TextAlign.center,
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
                   const Text(
                     "Hashem Comes to Meet You Where You are",
-                    style: text14style,
+                    style: text14Colorstyle,
                   ),
                 ],
               ),
@@ -243,7 +238,7 @@ class _ClassInfoState extends State<ClassInfo> {
                   child: Column(
                     children: [
                       const Divider(
-                        height: 2,
+                        height: 4,
                         color: Colors.limeAccent,
                       ),
                       const SizedBox(
@@ -251,10 +246,9 @@ class _ClassInfoState extends State<ClassInfo> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children:  [
-                          const Text("more"),
+                        children: [
+                          const Text("more "),
                           Image.asset("assets/asset1.png")
-
                         ],
                       ),
                     ],
@@ -268,102 +262,84 @@ class _ClassInfoState extends State<ClassInfo> {
                 ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+
                       Container(
                         margin: const EdgeInsets.only(left: 10, right: 10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              "Summary: This class was presented on Sunday Shlac,16 Sivan 5777,"
-                              "June 11, 2017, at Our Chaim, Monsey, NY",
-                              style: text11style,
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin:const EdgeInsets.only(left: 10, right: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
                               "Categories",
-                              style: text14boldStyle,
+                              style: text14boldColorStyle,
                             ),
-                            const   SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Row(
                               children: [
                                 Container(
-                                  padding:const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
-                                      borderRadius: const BorderRadius.all(
+                                          color: Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),                                      borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
                                   child: const Text(
                                     "Regatchover gaon",
-                                    style: text14style,
+                                    style: text14textColorstyle,
                                   ),
                                 ),
-                            const    SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Container(
-                                  padding:const  EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
+                                          color:Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
-                                  child:const  Text(
+                                  child: const Text(
                                     "Individually ",
-                                    style: text14style,
+                                    style: text14textColorstyle,
                                   ),
                                 ),
-                              const  SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Container(
-                                  padding:const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
-                                      borderRadius: const BorderRadius.all(
+                                          color: Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),                                      borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
-                                  child:const Text(
+                                  child: const Text(
                                     "Shlach",
-                                    style: text14style,
+                                    style: text14textColorstyle,
                                   ),
                                 ),
                               ],
                             ),
-                           const SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
-                              padding:const EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(color: Colors.grey, width: 2),
-                                  color: Colors.amber,
+                                      Border.all(color: Color(0xFFFAFFCB), width: 2),
+                                  color: Color(0xFFFAFFCB),
                                   borderRadius: const BorderRadius.all(
                                     Radius.circular(10),
                                   )),
                               child: const Text(
                                 "Regatchover gaon",
-                                style: text14style,
+                                style: text14textColorstyle,
                               ),
                             ),
                           ],
@@ -373,13 +349,13 @@ class _ClassInfoState extends State<ClassInfo> {
                         height: 20,
                       ),
                       Container(
-                        margin:const EdgeInsets.only(left: 10, right: 10),
+                        margin: const EdgeInsets.only(left: 10, right: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                          const  Text(
+                            const Text(
                               "Topics",
-                              style: text14boldStyle,
+                              style: text14boldColorStyle,
                             ),
                             const SizedBox(
                               height: 10,
@@ -387,32 +363,31 @@ class _ClassInfoState extends State<ClassInfo> {
                             Row(
                               children: [
                                 Container(
-                                  padding:const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
-                                      borderRadius: const BorderRadius.all(
+                                          color: Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),                                      borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
-                                  child:const Text(
+                                  child: const Text(
                                     "Regatchover gaon",
                                     style: text14style,
                                   ),
                                 ),
-                                const   SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Container(
-                                  padding:const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
+                                          color: Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
-                                  child:const Text(
+                                  child: const Text(
                                     "Individually ",
                                     style: text14style,
                                   ),
@@ -424,8 +399,8 @@ class _ClassInfoState extends State<ClassInfo> {
                                   padding: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       border: Border.all(
-                                          color: Colors.grey, width: 2),
-                                      color: Colors.amber,
+                                          color: Color(0xFFFAFFCB), width: 2),
+                                      color: Color(0xFFFAFFCB),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(10),
                                       )),
@@ -436,19 +411,19 @@ class _ClassInfoState extends State<ClassInfo> {
                                 ),
                               ],
                             ),
-                            const  SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Container(
-                              padding:const EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   border:
-                                      Border.all(color: Colors.grey, width: 2),
-                                  color: Colors.amber,
+                                      Border.all(color:Color(0xFFFAFFCB), width: 2),
+                                  color: Color(0xFFFAFFCB),
                                   borderRadius: const BorderRadius.all(
                                     Radius.circular(10),
                                   )),
-                              child:const Text(
+                              child: const Text(
                                 "Regatchover gaon",
                                 style: text14style,
                               ),
@@ -518,7 +493,10 @@ class _ClassInfoState extends State<ClassInfo> {
                             SizedBox(
                               height: 10,
                             ),
-                            Text("This is a sample comment. This is a sample comment.", style: text14style,)
+                            Text(
+                              "This is a sample comment. This is a sample comment.",
+                              style: text14style,
+                            )
                           ],
                         ),
                       ),
@@ -538,7 +516,10 @@ class _ClassInfoState extends State<ClassInfo> {
                             SizedBox(
                               height: 10,
                             ),
-                            Text("This is a sample comment. This is a sample comment.", style: text14style,)
+                            Text(
+                              "This is a sample comment. This is a sample comment.",
+                              style: text14style,
+                            )
                           ],
                         ),
                       ),
@@ -587,8 +568,8 @@ class _ClassInfoState extends State<ClassInfo> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Related Videos',
-                    style: text18style,
+                    'Upcoming Videos',
+                    style: text14boldColorStyle,
                   ),
                   Row(
                     children: const [
@@ -614,7 +595,7 @@ class _ClassInfoState extends State<ClassInfo> {
               margin: const EdgeInsets.only(left: 15),
               height: 170,
               child: ListView.builder(
-                // shrinkWrap: true,
+                  // shrinkWrap: true,
                   itemCount: 4,
                   physics: const AlwaysScrollableScrollPhysics(),
                   scrollDirection: Axis.horizontal,
@@ -644,8 +625,6 @@ class _ClassInfoState extends State<ClassInfo> {
             const SizedBox(
               height: 10,
             ),
-
-
           ],
         ),
       ),
