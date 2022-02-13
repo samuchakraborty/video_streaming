@@ -108,6 +108,7 @@ class NowPlaying extends StatelessWidget {
             const RowWise(
               imageUrl: "assets/Livello_5.png",
               labelText: "Recent Classes",
+              isTrue: false,
             ),
             const SizedBox(
               height: 15,
@@ -116,6 +117,7 @@ class NowPlaying extends StatelessWidget {
               imageUrl:
                   "assets/8029163_growth_analytics_analysis_graph_chart_icon.png",
               labelText: "Featured Classes",
+              isTrue: false,
             ),
             const SizedBox(
               height: 15,
@@ -123,6 +125,7 @@ class NowPlaying extends StatelessWidget {
             const RowWise(
               imageUrl: "assets/3325139_grid_icon.png",
               labelText: "Categories",
+              isTrue: false,
             ),
             const SizedBox(
               height: 15,
@@ -131,6 +134,7 @@ class NowPlaying extends StatelessWidget {
             const RowWise(
               imageUrl: "assets/Group 4291.png",
               labelText: "Series",
+              isTrue: false,
             ),
 
             const SizedBox(
@@ -140,6 +144,7 @@ class NowPlaying extends StatelessWidget {
             const RowWise(
               imageUrl: "assets/Group 4292.png",
               labelText: "Live Classes",
+              isTrue: false,
             ),
 
             const SizedBox(
@@ -162,6 +167,7 @@ class NowPlaying extends StatelessWidget {
                   imageUrl:
                       "assets/8029163_growth_analytics_analysis_graph_chart_icon.png",
                   labelText: "Class Schedule",
+                  isTrue: false,
                 ),
                 const SizedBox(
                   height: 15,
@@ -169,6 +175,7 @@ class NowPlaying extends StatelessWidget {
                 const RowWise(
                   imageUrl: "assets/3325139_grid_icon.png",
                   labelText: "About",
+                  isTrue: false,
                 ),
                 const SizedBox(
                   height: 15,
@@ -176,6 +183,7 @@ class NowPlaying extends StatelessWidget {
                 const RowWise(
                   imageUrl: "assets/Group 4291.png",
                   labelText: "Contact",
+                  isTrue: false,
                 ),
                 const SizedBox(
                   height: 15,
@@ -183,6 +191,7 @@ class NowPlaying extends StatelessWidget {
                 const RowWise(
                   imageUrl: "assets/Path 464.png",
                   labelText: "Sponsor",
+                  isTrue: false,
                 ),
                 const SizedBox(
                   height: 15,
@@ -190,12 +199,194 @@ class NowPlaying extends StatelessWidget {
                 const RowWise(
                   imageUrl: "assets/dollar.png",
                   labelText: "Donate",
+                  isTrue: false,
                 ),
               ],
             ),
 
             const SizedBox(
               height: 20,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  child: const Text(
+                    "Subscribe",
+                    style: text18fi,
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: const [
+                    RowWise(
+                      imageUrl: "assets/whatsapp.png",
+                      labelText: "WhatsApp (Daily Broadcast)",
+                      isTrue: true,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                 // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width / 2,
+                      height: 40,
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.black12)),
+                      child: TextFormField(
+                        textAlign: TextAlign.center,
+                        decoration: const InputDecoration(
+                          contentPadding: EdgeInsets.all(0),
+                          hintText: " Your phone number",
+                          isDense: true,
+                          hintStyle: TextStyle(fontSize: 12),
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      // alignment: Alignment.center,
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.black12)),
+                      child: const Text(
+                        'Join',
+                        style: TextStyle(
+                            color: Color(0xff777777),
+                            fontSize: 12,
+                            fontFamily: "Regular"),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: const [
+                    RowWise(
+                      imageUrl: "assets/envelope.png",
+                      labelText: "Email (Weekly Newsletter)",
+                      isTrue: true,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width / 2,
+                      height: 40,
+                      alignment: Alignment.center,
+                       margin: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.black12)),
+                      child: TextFormField(
+                        textAlign: TextAlign.center,
+                        decoration: const InputDecoration(
+                          contentPadding: EdgeInsets.all(0),
+                          hintText: " Your email address",
+                          isDense: true,
+                          hintStyle: TextStyle(fontSize: 12),
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      // alignment: Alignment.center,
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.only(left: 20),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.black12)),
+                      child: const Text(
+                        'JOIN',
+                        style: TextStyle(
+                            color: Color(0xff777777),
+                            fontSize: 12,
+                            fontFamily: "Regular"),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  '  Follow Us On Social Media',
+                  style: text18fi,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                 margin: const EdgeInsets.only(left: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/facebook.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/104461_twitter_icon.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/7123016_podcast_google_icon.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/Group 4341.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/Path 479.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/5279112_camera_instagram_social media_instagram logo_icon.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      Image.asset("assets/2559779_media_network_social_spotify_icon.png"),
+                      const SizedBox(
+                        width: 4,
+                      ),
+
+
+
+
+
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+              ],
             ),
           ],
         ),
@@ -209,10 +400,12 @@ class RowWise extends StatelessWidget {
     Key? key,
     required this.imageUrl,
     required this.labelText,
+    required this.isTrue,
   }) : super(key: key);
 
   final String imageUrl;
   final String labelText;
+  final bool isTrue;
 
   @override
   Widget build(BuildContext context) {
@@ -230,18 +423,19 @@ class RowWise extends StatelessWidget {
               ),
               Text(
                 labelText,
-                style: text14Color,
+                style: isTrue ? text16color : text14Color,
               ),
             ],
           ),
-          Row(
-            children: const [
-              Icon(
-                Icons.arrow_forward_ios,
-                size: 15,
-              ),
-            ],
-          ),
+          if (isTrue == false)
+            Row(
+              children: const [
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 15,
+                ),
+              ],
+            ),
         ],
       ),
     );

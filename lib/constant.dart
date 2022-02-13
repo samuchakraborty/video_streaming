@@ -56,3 +56,11 @@ const text18fi = TextStyle(
   fontFamily: "Regular",
   color: Color(0xff919191),
 );
+
+
+const text16color = TextStyle(
+  fontSize: 16,
+  fontFamily: "Regular",
+  fontWeight: FontWeight.bold,
+  color: Color(0xff254D5C),
+);
