@@ -543,16 +543,18 @@ class _LiveClassInfoState extends State<LiveClassInfo> {
                   child: Column(
                     children: [
                       const Divider(
-                        height: 2,
-                        color: Colors.limeAccent,
+                        height: 4,
+                        color: Colors.yellow,
                       ),
                       const SizedBox(
                         height: 4,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: const [
-                          Text("less"),
+                        children:  [
+                          const Text("less "),
+                          Image.asset("assets/asset2.png")
+
                         ],
                       ),
                     ],

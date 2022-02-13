@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'class_info.dart';
+import 'class_schedule.dart';
 import 'constant.dart';
 import 'online_class.dart';
 
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>const LiveClassInfo(),
+                              builder: (context) => const LiveClassInfo(),
                             ),
                           );
                         },
@@ -144,11 +145,21 @@ class _HomePageState extends State<HomePage> {
             ),
 
             /// card design
-            const CardWidget(
-              headingName: "Elul",
-              imageUrl: 'assets/Mask Group 1.png',
-              tittle: "The power of now",
-              subtitle: '"A person  Never Finds Himself in a Situation"',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ClassSchedule(),
+                  ),
+                );
+              },
+              child: const CardWidget(
+                headingName: "Elul",
+                imageUrl: 'assets/Mask Group 1.png',
+                tittle: "The power of now",
+                subtitle: '"A person  Never Finds Himself in a Situation"',
+              ),
             ),
 
             const SizedBox(
