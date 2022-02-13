@@ -628,12 +628,14 @@ class CardWidget extends StatelessWidget {
       required this.headingName,
       required this.imageUrl,
       required this.subtitle,
+      this.widget,
       required this.tittle})
       : super(key: key);
   final String headingName;
   final String imageUrl;
   final String tittle;
   final String subtitle;
+  final Widget? widget;
 
   @override
   Widget build(BuildContext context) {
@@ -648,18 +650,19 @@ class CardWidget extends StatelessWidget {
                 headingName,
                 style: text18style,
               ),
-              Row(
-                children: const [
-                  Text(
-                    "All",
-                    style: text14style,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 16,
-                  ),
-                ],
-              ),
+              if (widget == null)
+                Row(
+                  children: const [
+                    Text(
+                      "All",
+                      style: text14style,
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                    ),
+                  ],
+                ),
             ],
           ),
           const SizedBox(
@@ -682,14 +685,19 @@ class CardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    child: Text(
-                      tittle,
-                      style: text14boldStyle,
-                      //textAlign: TextAlign.justify,
-                      maxLines: 2,
-                    ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        child: Text(
+                          tittle,
+                          style: text14boldStyle,
+                          //textAlign: TextAlign.justify,
+                          maxLines: 2,
+                        ),
+                      ),
+                      if (widget != null) widget!
+                    ],
                   ),
                   const SizedBox(
                     height: 20,
