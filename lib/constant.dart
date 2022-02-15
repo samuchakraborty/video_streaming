@@ -7,7 +7,14 @@ const text18BlackStyle =
 
 const text12style =
     TextStyle(fontSize: 12, fontFamily: "Regular", color: Color(0xff777777));
-const text14style = TextStyle(fontSize: 14, fontFamily: "Regular");
+const text14style = TextStyle(fontSize: 14,fontFamily: "Regular");
+
+const text14colorstyle = TextStyle(fontSize: 14,fontFamily: "Regular", color: Color(0xffE0AA5C));
+
+const text14colorsstyle = TextStyle(fontSize: 14,fontFamily: "Regular", color: Color(0xff254D5C));
+
+
+
 const text12Boldstyle =
     TextStyle(fontSize: 12, fontWeight: FontWeight.bold, fontFamily: "Regular");
 
